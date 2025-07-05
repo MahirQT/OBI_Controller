@@ -21,7 +21,7 @@ class ESP32OBIController {
   }
 
   setupEventListeners() {
-    const buttons = document.querySelectorAll('.arrow, .action-btn');
+    const buttons = document.querySelectorAll('.arrow, .action-btn, .power-btn');
     buttons.forEach(button => {
       button.addEventListener('mousedown', () => this.addPressEffect(button));
       button.addEventListener('mouseup', () => this.removePressEffect(button));
@@ -60,7 +60,9 @@ class ESP32OBIController {
       ' ': 'stop', // Spacebar
       'KeyD': 'dance',
       'KeyS': 'startDetection',
-      'KeyX': 'stopDetection'
+      'KeyX': 'stopDetection',
+      'KeyP': 'powerOn', // P key for power on
+      'KeyO': 'powerOff' // O key for power off
     };
 
     if (keyCommands[e.code]) {
