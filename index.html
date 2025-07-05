@@ -1,41 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>OBI Controller</title>
+  <title>🤖 OBI Robot Controller</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <h1>OBI Robot Controller</h1>
+      <p class="subtitle">Your friendly AI companion ready to explore and assist!</p>
+    </header>
 
-  <h1>🎮 OBI Control Panel</h1>
-  <p class="subtitle">Tap to move & play with your robot friend!</p>
+    <div class="status-panel">
+      <div class="status-indicator">
+        <div class="status-dot online"></div>
+        <span>ESP32 Online</span>
+      </div>
+      <div class="battery-indicator">
+        <i class="fas fa-battery-three-quarters"></i>
+        <span>85%</span>
+      </div>
+      <div class="connection-info">
+        <i class="fas fa-wifi"></i>
+        <span>ESP32_AP</span>
+      </div>
+    </div>
 
-  <div class="controller">
-    <div class="row">
-      <div class="empty"></div>
-      <button class="arrow" onclick="sendCommand('forward')">⬆️</button>
-      <div class="empty"></div>
+    <div class="controller-section">
+      <h2>Movement Controls</h2>
+      <div class="controller">
+        <div class="row">
+          <div class="empty"></div>
+          <button class="arrow forward" onclick="sendCommand('forward')" title="Move Forward">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          <div class="empty"></div>
+        </div>
+        <div class="row">
+          <button class="arrow left" onclick="sendCommand('left')" title="Turn Left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="arrow stop" onclick="sendCommand('stop')" title="Emergency Stop">
+            <i class="fas fa-stop"></i>
+          </button>
+          <button class="arrow right" onclick="sendCommand('right')" title="Turn Right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="row">
+          <div class="empty"></div>
+          <button class="arrow backward" onclick="sendCommand('backward')" title="Move Backward">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="empty"></div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <button class="arrow" onclick="sendCommand('left')">⬅️</button>
-      <button class="arrow stop" onclick="sendCommand('stop')">⛔</button>
-      <button class="arrow" onclick="sendCommand('right')">➡️</button>
+
+    <div class="action-section">
+      <h2>Special Functions</h2>
+      <div class="action-buttons">
+        <button class="action-btn dance" onclick="sendCommand('dance')">
+          <i class="fas fa-music"></i>
+          <span>Dance Mode</span>
+        </button>
+        <button class="action-btn detection" onclick="sendCommand('startDetection')">
+          <i class="fas fa-eye"></i>
+          <span>Start Detection</span>
+        </button>
+        <button class="action-btn stop-detection" onclick="sendCommand('stopDetection')">
+          <i class="fas fa-eye-slash"></i>
+          <span>Stop Detection</span>
+        </button>
+      </div>
     </div>
-    <div class="row">
-      <div class="empty"></div>
-      <button class="arrow" onclick="sendCommand('backward')">⬇️</button>
-      <div class="empty"></div>
+
+    <div class="info-panel">
+      <div class="info-card">
+        <i class="fas fa-info-circle"></i>
+        <h3>About OBI</h3>
+        <p>OBI is an intelligent robot designed to assist with navigation, object detection, and entertainment. Use the controls above to guide OBI through various tasks and environments.</p>
+      </div>
     </div>
   </div>
 
-  <div class="action-buttons">
-    <button onclick="sendCommand('dance')">💃 Dance Mode</button>
-    <button onclick="sendCommand('startDetection')">🔍 Start Detection</button>
-    <button onclick="sendCommand('stopDetection')">🚫 Stop Detection</button>
-  </div>
-
-  <footer>🤖 OBI is ready for your command!</footer>
   <script src="script.js"></script>
 </body>
 </html>
