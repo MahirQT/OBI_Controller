@@ -8,7 +8,6 @@ class ESP32OBIController {
   }
 
   getESP32IP() {
-    // Try to get ESP32 IP from URL or use default
     const urlParams = new URLSearchParams(window.location.search);
     const ip = urlParams.get('ip') || '192.168.4.1'; // Default ESP32 AP IP
     return ip;
@@ -22,7 +21,6 @@ class ESP32OBIController {
   }
 
   setupEventListeners() {
-    // Add visual feedback for button presses
     const buttons = document.querySelectorAll('.arrow, .action-btn');
     buttons.forEach(button => {
       button.addEventListener('mousedown', () => this.addPressEffect(button));
@@ -30,11 +28,9 @@ class ESP32OBIController {
       button.addEventListener('mouseleave', () => this.removePressEffect(button));
     });
 
-    // Add keyboard controls
     document.addEventListener('keydown', (e) => this.handleKeyPress(e));
     document.addEventListener('keyup', (e) => this.handleKeyRelease(e));
 
-    // Add touch events for mobile
     buttons.forEach(button => {
       button.addEventListener('touchstart', (e) => {
         e.preventDefault();
@@ -124,7 +120,6 @@ class ESP32OBIController {
   }
 
   showCommandFeedback(cmd) {
-    // Add visual feedback for the command being sent
     const button = document.querySelector(`[onclick*="${cmd}"]`);
     if (button) {
       button.style.animation = 'pulse 0.5s ease-in-out';
