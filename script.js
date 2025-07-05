@@ -208,9 +208,27 @@ class ESP32OBIController {
       if (response.status) {
         this.updateStatus(response.status === 'ok');
       }
+      if (response.detection !== undefined) {
+        this.updateDetectionStatus(response.detection);
+      }
     } catch (e) {
       // If response is not JSON, just log it
       console.log('ESP32 Response:', data);
+    }
+  }
+
+  updateDetectionStatus(isActive) {
+    const startDetectionBtn = document.querySelector('.action-btn.detection');
+    const stopDetectionBtn = document.querySelector('.action-btn.stop-detection');
+    
+    if (startDetectionBtn && stopDetectionBtn) {
+      if (isActive) {
+        startDetectionBtn.classList.add('active');
+        stopDetectionBtn.classList.remove('active');
+      } else {
+        startDetectionBtn.classList.remove('active');
+        stopDetectionBtn.classList.add('active');
+      }
     }
   }
 

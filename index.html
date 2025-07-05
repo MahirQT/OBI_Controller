@@ -4,8 +4,9 @@
   <title>🤖 OBI Remote Controller</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="icons.css">
+  <link rel="stylesheet" href="simple-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -33,11 +34,9 @@
       <h2>Power Control</h2>
       <div class="power-buttons">
         <button class="power-btn power-on" onclick="sendCommand('powerOn')" title="Turn Robot On">
-          <i class="fas fa-power-off"></i>
           <span>Power ON</span>
         </button>
         <button class="power-btn power-off" onclick="sendCommand('powerOff')" title="Turn Robot Off">
-          <i class="fas fa-power-off"></i>
           <span>Power OFF</span>
         </button>
       </div>
@@ -82,11 +81,15 @@
           <span>Dance Mode</span>
         </button>
         <button class="action-btn detection" onclick="sendCommand('startDetection')">
-          <i class="fas fa-eye"></i>
+          <div class="detection-indicator">
+            <div class="detection-dot"></div>
+          </div>
           <span>Start Detection</span>
         </button>
         <button class="action-btn stop-detection" onclick="sendCommand('stopDetection')">
-          <i class="fas fa-eye-slash"></i>
+          <div class="detection-indicator">
+            <div class="detection-dot"></div>
+          </div>
           <span>Stop Detection</span>
         </button>
       </div>

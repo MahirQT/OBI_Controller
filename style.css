@@ -172,10 +172,9 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-weight: 600;
-  min-width: 180px;
   justify-content: center;
+  font-weight: 700;
+  min-width: 180px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -224,18 +223,7 @@ body {
   background: linear-gradient(145deg, #ee5a52, #ff6b6b);
 }
 
-.power-btn i {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
 
-.power-btn:hover i {
-  transform: scale(1.2);
-}
-
-.power-btn.power-on i {
-  animation: powerPulse 2s infinite;
-}
 
 @keyframes powerPulse {
   0%, 100% {
@@ -461,6 +449,60 @@ body {
 .action-btn.stop-detection {
   background: linear-gradient(145deg, #ff6b6b, #ee5a52);
   color: white;
+}
+
+/* Detection Indicator LED */
+.detection-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.detection-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #666;
+  box-shadow: 0 0 8px rgba(102, 102, 102, 0.5);
+  transition: all 0.3s ease;
+}
+
+.action-btn.detection .detection-dot {
+  background: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+.action-btn.detection.active .detection-dot {
+  background: #2ecc71;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.8);
+  animation: detectionPulse 2s infinite;
+}
+
+.action-btn.stop-detection .detection-dot {
+  background: #e74c3c;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+}
+
+.action-btn.stop-detection.active .detection-dot {
+  background: #f39c12;
+  box-shadow: 0 0 12px rgba(243, 156, 18, 0.8);
+  animation: detectionPulse 2s infinite;
+}
+
+.action-btn:hover .detection-dot {
+  transform: scale(1.2);
+}
+
+@keyframes detectionPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
 }
 
 .action-btn i {

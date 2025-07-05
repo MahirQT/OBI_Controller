@@ -1,0 +1,151 @@
+/* Simple CSS Icons for ESP32 Web Server */
+
+/* Base icon styles */
+.fas {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Power Off Icon */
+.fa-power-off::before {
+  content: "⏻";
+  font-size: 1.2em;
+}
+
+/* Battery Icons */
+.fa-battery-empty::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+.fa-battery-quarter::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+.fa-battery-half::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+.fa-battery-three-quarters::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+.fa-battery-full::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+/* WiFi Icon */
+.fa-wifi::before {
+  content: "📶";
+  font-size: 1.2em;
+}
+
+/* Arrow Icons */
+.fa-chevron-up::before {
+  content: "▲";
+  font-size: 1.2em;
+}
+
+.fa-chevron-down::before {
+  content: "▼";
+  font-size: 1.2em;
+}
+
+.fa-chevron-left::before {
+  content: "◀";
+  font-size: 1.2em;
+}
+
+.fa-chevron-right::before {
+  content: "▶";
+  font-size: 1.2em;
+}
+
+/* Stop Icon */
+.fa-stop::before {
+  content: "⏹";
+  font-size: 1.2em;
+}
+
+/* Music Icon */
+.fa-music::before {
+  content: "🎵";
+  font-size: 1.2em;
+}
+
+/* Eye Icons */
+.fa-eye::before {
+  content: "👁";
+  font-size: 1.2em;
+}
+
+.fa-eye-slash::before {
+  content: "👁‍🗨";
+  font-size: 1.2em;
+}
+
+/* Info Circle Icon */
+.fa-info-circle::before {
+  content: "ℹ";
+  font-size: 1.2em;
+}
+
+/* Fallback: Simple ASCII characters if Unicode doesn't work */
+@media screen and (max-width: 1px) {
+  .fa-power-off::before {
+    content: "P";
+  }
+  
+  .fa-battery-empty::before,
+  .fa-battery-quarter::before,
+  .fa-battery-half::before,
+  .fa-battery-three-quarters::before,
+  .fa-battery-full::before {
+    content: "B";
+  }
+  
+  .fa-wifi::before {
+    content: "W";
+  }
+  
+  .fa-chevron-up::before {
+    content: "^";
+  }
+  
+  .fa-chevron-down::before {
+    content: "v";
+  }
+  
+  .fa-chevron-left::before {
+    content: "<";
+  }
+  
+  .fa-chevron-right::before {
+    content: ">";
+  }
+  
+  .fa-stop::before {
+    content: "■";
+  }
+  
+  .fa-music::before {
+    content: "♪";
+  }
+  
+  .fa-eye::before {
+    content: "O";
+  }
+  
+  .fa-eye-slash::before {
+    content: "Ø";
+  }
+  
+  .fa-info-circle::before {
+    content: "i";
+  }
+} 

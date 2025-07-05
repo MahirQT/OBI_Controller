@@ -1,0 +1,98 @@
+/* Simple Text Icons for ESP32 Web Server - Backup Solution */
+
+/* If Unicode icons don't work, use these simple text alternatives */
+.fa-power-off::before {
+  content: "PWR";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-battery-empty::before {
+  content: "BAT";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-battery-quarter::before {
+  content: "BAT";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-battery-half::before {
+  content: "BAT";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-battery-three-quarters::before {
+  content: "BAT";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-battery-full::before {
+  content: "BAT";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-wifi::before {
+  content: "WIFI";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-chevron-up::before {
+  content: "▲";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fa-chevron-down::before {
+  content: "▼";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fa-chevron-left::before {
+  content: "◀";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fa-chevron-right::before {
+  content: "▶";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fa-stop::before {
+  content: "STOP";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-music::before {
+  content: "♪";
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fa-eye::before {
+  content: "EYE";
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.fa-eye-slash::before {
+  content: "NO EYE";
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.fa-info-circle::before {
+  content: "INFO";
+  font-size: 0.8em;
+  font-weight: bold;
+} 
