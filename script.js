@@ -251,7 +251,7 @@ class ESP32OBIController {
     if (infoCard) {
       infoCard.innerHTML = `
         OBI is powered by an ESP32 microcontroller with WiFi capabilities. 
-        Connect to the ESP32_AP WiFi network to control OBI remotely. 
+        Connect to the OBI_IS_HERE WiFi network to control OBI remotely. 
         Current IP: <strong>${this.esp32IP}</strong><br><br>
         <small>💡 Tip: Use arrow keys or tap buttons to control OBI</small>
       `;

@@ -6,9 +6,9 @@
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   font-family: 'Quicksand', sans-serif;
-  color: #2c3e50;
+  color: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -30,19 +30,19 @@ body {
   font-family: 'Orbitron', monospace;
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(90deg, #00fff7 0%, #4ecdc4 50%, #45b7d1 100%);
+  background: linear-gradient(90deg, #dfff4f 0%, #b8e62e 50%, #9fd936 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease-in-out infinite;
   margin-bottom: 10px;
-  text-shadow: 0 4px 24px rgba(0,255,247,0.15);
+  text-shadow: 0 4px 24px rgba(223,255,79,0.3);
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #ecf0f1;
+  color: #dfff4f;
   font-weight: 400;
   opacity: 0.9;
 }
@@ -60,13 +60,13 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(223, 255, 79, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 15px 25px;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ecf0f1;
+  border: 1px solid rgba(223, 255, 79, 0.3);
+  color: #dfff4f;
   font-weight: 500;
 }
 
@@ -78,17 +78,17 @@ body {
 }
 
 .status-dot.online {
-  background: #2ecc71;
-  box-shadow: 0 0 10px #2ecc71;
+  background: #dfff4f;
+  box-shadow: 0 0 10px #dfff4f;
 }
 
 .battery-indicator i {
-  color: #f39c12;
+  color: #dfff4f;
   font-size: 1.2rem;
 }
 
 .connection-info i {
-  color: #3498db;
+  color: #dfff4f;
   font-size: 1.2rem;
 }
 
@@ -102,7 +102,7 @@ body {
 .controller-section h2 {
   font-family: 'Orbitron', monospace;
   font-size: 1.8rem;
-  color: #ecf0f1;
+  color: #dfff4f;
   margin-bottom: 25px;
   font-weight: 700;
 }
@@ -121,14 +121,14 @@ body {
 }
 
 .arrow {
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
   border: none;
   border-radius: 20px;
   font-size: 1.5rem;
   padding: 20px;
-  color: #2c3e50;
+  color: #000000;
   box-shadow: 
-    0 8px 16px rgba(0,0,0,0.1),
+    0 8px 16px rgba(223,255,79,0.3),
     inset 0 1px 0 rgba(255,255,255,0.8);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -154,7 +154,7 @@ body {
 .arrow:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 
-    0 15px 30px rgba(0,0,0,0.2),
+    0 15px 30px rgba(223,255,79,0.4),
     inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
@@ -163,27 +163,27 @@ body {
 }
 
 .arrow.forward {
-  background: linear-gradient(145deg, #4ecdc4, #44a08d);
-  color: white;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
+  color: #000000;
 }
 
 .arrow.backward {
-  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
-  color: white;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
+  color: #000000;
 }
 
 .arrow.left {
-  background: linear-gradient(145deg, #45b7d1, #3a9bb8);
-  color: white;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
+  color: #000000;
 }
 
 .arrow.right {
-  background: linear-gradient(145deg, #96ceb4, #7fb8a3);
-  color: white;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
+  color: #000000;
 }
 
 .arrow.stop {
-  background: linear-gradient(145deg, #e74c3c, #c0392b);
+  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
   color: white;
   animation: emergencyPulse 2s infinite;
 }
@@ -203,54 +203,50 @@ body {
 .action-section h2 {
   font-family: 'Orbitron', monospace;
   font-size: 1.8rem;
-  color: #ecf0f1;
+  color: #dfff4f;
   margin-bottom: 25px;
   font-weight: 700;
 }
 
 .action-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 300px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .action-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
+  border: none;
   border-radius: 15px;
-  padding: 18px 25px;
-  color: #ecf0f1;
+  padding: 15px 30px;
+  color: #000000;
+  font-weight: 600;
   font-size: 1rem;
-  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(223,255,79,0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .action-btn:hover {
-  background: linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(223,255,79,0.4);
 }
 
 .action-btn.dance {
-  border-left: 4px solid #e91e63;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
 }
 
 .action-btn.detection {
-  border-left: 4px solid #2196f3;
+  background: linear-gradient(145deg, #dfff4f, #b8e62e);
 }
 
 .action-btn.stop-detection {
-  border-left: 4px solid #ff9800;
+  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+  color: white;
 }
 
 .action-btn i {
@@ -259,48 +255,53 @@ body {
 
 /* Info Panel */
 .info-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   margin-bottom: 40px;
   animation: fadeInUp 1s ease-out 1.2s both;
 }
 
 .info-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(223, 255, 79, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 20px;
-  padding: 30px;
+  padding: 25px;
+  border: 1px solid rgba(223, 255, 79, 0.2);
   text-align: center;
-  color: #ecf0f1;
 }
 
 .info-card i {
   font-size: 2.5rem;
-  color: #4ecdc4;
+  color: #dfff4f;
   margin-bottom: 15px;
 }
 
 .info-card h3 {
   font-family: 'Orbitron', monospace;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #dfff4f;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 
 .info-card p {
   line-height: 1.6;
   opacity: 0.9;
+  color: #ffffff;
 }
 
 /* Footer */
 .footer {
-  background: rgba(0,0,0,0.2);
+  background: rgba(223, 255, 79, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 30px;
   margin-top: 40px;
   animation: fadeInUp 1s ease-out 1.5s both;
+  border: 1px solid rgba(223, 255, 79, 0.2);
 }
 
 .footer-content {
@@ -313,20 +314,20 @@ body {
 .footer-section h4 {
   font-family: 'Orbitron', monospace;
   font-size: 1.2rem;
-  color: #ecf0f1;
+  color: #dfff4f;
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .footer-section p {
-  color: #bdc3c7;
+  color: #ffffff;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
 .footer-section ul {
   list-style: none;
-  color: #bdc3c7;
+  color: #ffffff;
 }
 
 .footer-section ul li {
@@ -353,23 +354,23 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(223, 255, 79, 0.2);
   border-radius: 50%;
-  color: #ecf0f1;
+  color: #dfff4f;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(223, 255, 79, 0.3);
   transform: translateY(-3px);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: #bdc3c7;
+  border-top: 1px solid rgba(223, 255, 79, 0.2);
+  color: #ffffff;
 }
 
 /* Animations */
@@ -439,18 +440,25 @@ body {
   }
   
   .controller {
-    grid-template-columns: repeat(3, 80px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 90px);
+    grid-gap: 12px;
   }
   
   .arrow {
-    padding: 15px;
-    font-size: 1.2rem;
+    padding: 18px;
+    font-size: 1.4rem;
+    border-radius: 18px;
   }
   
   .empty {
-    width: 80px;
-    height: 60px;
+    width: 90px;
+    height: 65px;
+  }
+  
+  .action-btn {
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    border-radius: 12px;
   }
   
   .footer-content {
@@ -465,22 +473,35 @@ body {
   }
   
   .controller {
-    grid-template-columns: repeat(3, 70px);
-    grid-gap: 8px;
+    grid-template-columns: repeat(3, 85px);
+    grid-gap: 10px;
   }
   
   .arrow {
-    padding: 12px;
-    font-size: 1rem;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 16px;
   }
   
   .empty {
-    width: 70px;
-    height: 50px;
+    width: 85px;
+    height: 70px;
   }
   
   .action-btn {
-    padding: 15px 20px;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    min-width: 140px;
+    justify-content: center;
+  }
+  
+  .action-buttons {
+    gap: 15px;
+  }
+  
+  .status-indicator, .battery-indicator, .connection-info {
+    padding: 12px 20px;
     font-size: 0.9rem;
   }
 }
