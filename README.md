@@ -69,4 +69,4 @@ server.on("/status", HTTP_GET, [](){ server.send(200, "application/json", "{\"st
 ---
 
 ## 📄 License
-MIT License. Free for personal and educational use. 
+WTH you required persmission to use my SITE , its all yours , just dont forgot to give me CREDIT ^-^
