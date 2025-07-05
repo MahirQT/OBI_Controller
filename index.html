@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OBI Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>🎮 OBI Control Panel</h1>
+  <p class="subtitle">Tap to move & play with your robot friend!</p>
+
+  <div class="controller">
+    <div class="row">
+      <div class="empty"></div>
+      <button class="arrow" onclick="sendCommand('forward')">⬆️</button>
+      <div class="empty"></div>
+    </div>
+    <div class="row">
+      <button class="arrow" onclick="sendCommand('left')">⬅️</button>
+      <button class="arrow stop" onclick="sendCommand('stop')">⛔</button>
+      <button class="arrow" onclick="sendCommand('right')">➡️</button>
+    </div>
+    <div class="row">
+      <div class="empty"></div>
+      <button class="arrow" onclick="sendCommand('backward')">⬇️</button>
+      <div class="empty"></div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button onclick="sendCommand('dance')">💃 Dance Mode</button>
+    <button onclick="sendCommand('startDetection')">🔍 Start Detection</button>
+    <button onclick="sendCommand('stopDetection')">🚫 Stop Detection</button>
+  </div>
+
+  <footer>🤖 OBI is ready for your command!</footer>
+  <script src="script.js"></script>
+</body>
+</html>
