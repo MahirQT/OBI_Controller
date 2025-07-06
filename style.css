@@ -734,8 +734,6 @@ body {
   }
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
@@ -876,5 +874,65 @@ body {
   
   .info-card p {
     font-size: 0.95rem;
+  }
+}
+
+.movement-controls-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+.dpad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.dpad-middle-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.dpad-btn {
+  background: #d4ff5c;
+  color: #222;
+  font-size: 2rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #0004;
+  width: 64px;
+  height: 64px;
+  margin: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  outline: none;
+  touch-action: manipulation;
+}
+.dpad-btn:active {
+  background: #b6e53c;
+  box-shadow: 0 1px 6px #0006;
+}
+.dpad-stop {
+  background: #ff5c5c;
+  color: #fff;
+}
+.dpad-stop:active {
+  background: #e53c3c;
+}
+@media (max-width: 600px) {
+  .dpad-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    border-radius: 0.7rem;
+  }
+  .dpad-container {
+    gap: 0.3rem;
+  }
+  .dpad-middle-row {
+    gap: 0.3rem;
   }
 }

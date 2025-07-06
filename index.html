@@ -42,36 +42,18 @@
       </div>
     </div>
 
-    <div class="controller-section">
-      <h2>Movement Controls</h2>
-      <div class="controller">
-        <div class="row">
-          <div class="empty"></div>
-          <button class="arrow forward" onclick="sendCommand('forward')" title="Move Forward">
-            <i class="fas fa-chevron-up"></i>
-          </button>
-          <div class="empty"></div>
+    <section class="movement-controls-section">
+      <h2 class="section-title">Movement Controls</h2>
+      <div class="dpad-container">
+        <button class="dpad-btn dpad-up" aria-label="Up">^</button>
+        <div class="dpad-middle-row">
+          <button class="dpad-btn dpad-left" aria-label="Left">&lt;</button>
+          <button class="dpad-btn dpad-stop" aria-label="Stop">■</button>
+          <button class="dpad-btn dpad-right" aria-label="Right">&gt;</button>
         </div>
-        <div class="row">
-          <button class="arrow left" onclick="sendCommand('left')" title="Turn Left">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="arrow stop" onclick="sendCommand('stop')" title="Emergency Stop">
-            <i class="fas fa-stop"></i>
-          </button>
-          <button class="arrow right" onclick="sendCommand('right')" title="Turn Right">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <div class="row">
-          <div class="empty"></div>
-          <button class="arrow backward" onclick="sendCommand('backward')" title="Move Backward">
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="empty"></div>
-        </div>
+        <button class="dpad-btn dpad-down" aria-label="Down">v</button>
       </div>
-    </div>
+    </section>
 
     <div class="action-section">
       <h2>Special Functions</h2>
